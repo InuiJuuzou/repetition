@@ -56,6 +56,10 @@ public:
         }
         return size;
     }
+    //без удаления,двумя указателями
+    int removeDuplicates(std::vector<int>& nums) {
+    
+    }
 };
 
 int main()
