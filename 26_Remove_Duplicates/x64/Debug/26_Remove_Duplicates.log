@@ -1,3 +1,4 @@
 ﻿  Source.cpp
 D:\leetcode\repetition\26_Remove_Duplicates\26_Remove_Duplicates\Source.cpp(26,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\leetcode\repetition\26_Remove_Duplicates\26_Remove_Duplicates\Source.cpp(57,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
   26_Remove_Duplicates.vcxproj -> D:\leetcode\repetition\26_Remove_Duplicates\x64\Debug\26_Remove_Duplicates.exe

@@ -6,7 +6,7 @@
 
 class Solution {
 public:
-    int removeDuplicates(std::vector<int>& nums) {
+    int removeDuplicatesv1(std::vector<int>& nums) {
         std::unordered_set<int> tmp;
         size_t size_num = nums.size();
         for (int i=0;i<size_num;)
@@ -25,13 +25,44 @@ public:
 
         return size_num;
     }
+    int removeDuplicatesv2(std::vector<int>& nums) {
+        size_t size = nums.size();
+        for (int i = 0; i < size; ++i)
+        {
+            int k = i+1;
+            int count = 0;
+            if (k >= size)
+            {
+                break;
+            }
+            while (nums[i] == nums[k] && k<size)
+            {
+                ++count;
+                ++k;
+            }
+            if (count >1)
+            {
+                nums.erase(nums.begin() + i, nums.begin() + i + count);
+                size -= count;
+                continue;
+            }
+            if (count == 1)
+            {
+                nums.erase(nums.begin() + i + count);
+                --size;
+            }
+
+            
+        }
+        return size;
+    }
 };
 
 int main()
 {
     Solution s;
     std::vector<int> nums= {1,1,1,2,2,3,3,4 };
-    std::cout << s.removeDuplicates(nums)<<std::endl;
+    std::cout << s.removeDuplicatesv2(nums)<<std::endl;
     for (int n : nums)
     {
         std::cout << n << " ";
