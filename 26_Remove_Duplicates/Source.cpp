@@ -35,7 +35,7 @@ public:
             {
                 break;
             }
-            while (nums[i] == nums[k] && k<size)
+            while (k < size && nums[i] == nums[k])
             {
                 ++count;
                 ++k;
@@ -61,7 +61,7 @@ public:
 int main()
 {
     Solution s;
-    std::vector<int> nums= {1,1,1,2,2,3,3,4 };
+    std::vector<int> nums= {1,1 };
     std::cout << s.removeDuplicatesv2(nums)<<std::endl;
     for (int n : nums)
     {
