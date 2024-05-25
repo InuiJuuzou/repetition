@@ -1,8 +1,11 @@
-//целочисленный массив отсортиорованный в порядке неубывания удалить дубликаты на месте так, чтобы каждый уникальный элемент появлялся только 1 раз. Порядок элменетов не изменный. 
+п»ї//С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹Р№ РјР°СЃСЃРёРІ РѕС‚СЃРѕСЂС‚РёРѕСЂРѕРІР°РЅРЅС‹Р№ РІ РїРѕСЂСЏРґРєРµ РЅРµСѓР±С‹РІР°РЅРёСЏ СѓРґР°Р»РёС‚СЊ РґСѓР±Р»РёРєР°С‚С‹ РЅР° РјРµСЃС‚Рµ С‚Р°Рє, С‡С‚РѕР±С‹ РєР°Р¶РґС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РїРѕСЏРІР»СЏР»СЃСЏ С‚РѕР»СЊРєРѕ 1 СЂР°Р·. РџРѕСЂСЏРґРѕРє СЌР»РјРµРЅРµС‚РѕРІ РЅРµ РёР·РјРµРЅРЅС‹Р№. 
 
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <cassert>
+
+#pragma execution_character_set("utf-8")
 
 class Solution {
 public:
@@ -56,20 +59,75 @@ public:
         }
         return size;
     }
-    //без удаления,двумя указателями
+    //Р±РµР· СѓРґР°Р»РµРЅРёСЏ,РґРІСѓРјСЏ СѓРєР°Р·Р°С‚РµР»СЏРјРё
     int removeDuplicates(std::vector<int>& nums) {
-    
+        size_t size = nums.size();
+        
+        int i = 0;//С‚РµРєСѓС‰РёР№ СЌР»РµРјРµРЅС‚ РІ РјР°СЃСЃРёРІРµ
+        int k = 1;//СѓРЅРёРєР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚
+        int count = 1;//РєРѕР»РёС‡РµСЃС‚РІРѕ СѓРЅРёРєР°Р»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РєР°Рє РјРёРЅРёРјСѓРј 1 РµСЃС‚СЊ РІСЃРµРіРґР°
+
+        for (; i < size && k<size; ++i)
+        {
+            while (k < size)
+            {
+                if (nums[i] < nums[k])
+                {
+                    std::swap(nums[i + 1], nums[k]);
+                    ++count;
+                    break;
+                }
+                ++k;
+            }
+            if (k == size - 1 && nums[k]==nums[i])
+                break;
+
+        }
+
+
+        return count;
+
     }
 };
 
-int main()
+void Test()
 {
     Solution s;
-    std::vector<int> nums= {1,1 };
-    std::cout << s.removeDuplicatesv2(nums)<<std::endl;
-    for (int n : nums)
     {
-        std::cout << n << " ";
+        std::vector<int> nums = { 1,1,1,1,1,1 };
+        assert(s.removeDuplicates(nums) == 1);
+        std::vector<int> answer = { 1 };
+        for (int i = 0; i < s.removeDuplicates(nums); ++i)
+        {
+            assert(answer[i] == nums[i]);
+        }
     }
+    {
+        std::vector<int> nums = { 1};
+        assert(s.removeDuplicates(nums) == 1);
+    }
+    {
+        std::vector<int> nums = { 1,2,3 };
+        assert(s.removeDuplicates(nums) == 3);
 
+    }
+    {
+        std::vector<int> nums = { 0,0,1,1,1,2,2,3,3,4 };
+        int count = s.removeDuplicates(nums);
+        assert(count == 5);
+
+        std::vector<int> answer = {0,1,2,3,4 };
+        for (int i = 0; i < count; ++i)
+        {
+            assert(answer[i] == nums[i]);
+        }
+    }
+    std::cout << "DONE!" << std::endl;
+
+}
+
+int main()
+{
+    Test();
+   
 }
