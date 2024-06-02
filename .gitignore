@@ -12,5 +12,12 @@
 /75_Sort_Colors/Project1/*.vcxproj.user
 /75_Sort_Colors/Project1.sln
 
+/169. Majority Element/.vs/*
+/169. Majority Element/Debug
+/169. Majority Element/169. Majority Element/Debug/*
+/169. Majority Element/169. Majority Element/*.vcxproj
+/169. Majority Element/169. Majority Element/*.vcxproj.filters
+/169. Majority Element/169. Majority Element/*.vcxproj.user
+/169. Majority Element/169. Majority Element.sln
 
 
