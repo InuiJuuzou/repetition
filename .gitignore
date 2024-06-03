@@ -20,4 +20,12 @@
 /169. Majority Element/169. Majority Element/*.vcxproj.user
 /169. Majority Element/169. Majority Element.sln
 
+/48_Rotate Image/.vs/*
+/48_Rotate Image/Debug
+/48_Rotate Image/48_Rotate Image/Debug/*
+/48_Rotate Image/48_Rotate Image/*.vcxproj
+/48_Rotate Image/48_Rotate Image/*.vcxproj.filters
+/48_Rotate Image/48_Rotate Image/*.vcxproj.user
+/48_Rotate Image/Source.sln
+
 
