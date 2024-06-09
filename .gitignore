@@ -28,4 +28,12 @@
 /48_Rotate Image/48_Rotate Image/*.vcxproj.user
 /48_Rotate Image/Source.sln
 
+/17_Letter_Combinations/.vs/*
+/17_Letter_Combinations/x64/*
+/17_Letter_Combinations/17_Letter_Combinations_of_a_Phone_Number/Debug/*
+/17_Letter_Combinations/17_Letter_Combinations_of_a_Phone_Number/*.vcxproj
+/17_Letter_Combinations/17_Letter_Combinations_of_a_Phone_Number/*.vcxproj.filters
+/17_Letter_Combinations/17_Letter_Combinations_of_a_Phone_Number/*.vcxproj.user
+/17_Letter_Combinations/Source.sln
+
 
