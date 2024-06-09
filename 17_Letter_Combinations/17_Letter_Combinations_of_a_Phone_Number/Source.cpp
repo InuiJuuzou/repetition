@@ -40,6 +40,14 @@ public:
         //Формирование клавиатуры
         std::unordered_map<char, std::string> keyboard = CreationKeyboard();
         //------------------------------------------------
+        if (digits.length() == 1)
+        {
+            std::string temp = keyboard.at(digits[0]);
+            for (int i = 0; i<temp.size();++i)
+            {
+                result.push_back(temp.substr(i, 1));
+            }
+        }
 
        
         return result;
@@ -50,5 +58,10 @@ int main()
 {
     using namespace std;
     Solution s;
-    s.letterCombinations("23");
+    auto v = s.letterCombinations("7");
+    
+    for (auto i : v)
+    {
+        cout << i << " ";
+    }
 }
