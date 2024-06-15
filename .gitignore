@@ -36,4 +36,10 @@
 /17_Letter_Combinations/17_Letter_Combinations_of_a_Phone_Number/*.vcxproj.user
 /17_Letter_Combinations/Source.sln
 
-
+/784_Letter_Case_Permutation/.vs/*
+/784_Letter_Case_Permutation/Debug/*
+/784_Letter_Case_Permutation/784_Letter_Case_Permutation/Debug/*
+/784_Letter_Case_Permutation/784_Letter_Case_Permutation/*.vcxproj
+/784_Letter_Case_Permutation/784_Letter_Case_Permutation/*.vcxproj.filters
+/784_Letter_Case_Permutation/784_Letter_Case_Permutation/*.vcxproj.user
+/784_Letter_Case_Permutation/784_Letter_Case_Permutatione.sln
