@@ -43,3 +43,12 @@
 /784_Letter_Case_Permutation/784_Letter_Case_Permutation/*.vcxproj.filters
 /784_Letter_Case_Permutation/784_Letter_Case_Permutation/*.vcxproj.user
 /784_Letter_Case_Permutation/784_Letter_Case_Permutatione.sln
+
+
+/28_Find_Index/.vs/*
+/28_Find_Index/Debug/*
+/28_Find_Index/28_Find_Index/Debug/*
+/28_Find_Index/28_Find_Index/*.vcxproj
+/28_Find_Index/28_Find_Index/*.vcxproj.filters
+/28_Find_Index/28_Find_Index/*.vcxproj.user
+/28_Find_Index/28_Find_Index.sln
