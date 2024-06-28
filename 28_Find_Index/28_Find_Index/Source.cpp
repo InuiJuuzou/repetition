@@ -4,6 +4,8 @@
 
 using namespace std;
 
+#pragma execution_character_set("utf-8")
+
 class Solution {
 public:
     //мое решение
@@ -34,7 +36,16 @@ public:
     }
     //подсмотренное решение
     int strStr(string haystack, string needle) {
-
+        size_t size = needle.size();
+        for (int i = 0; i < haystack.size(); ++i)
+        {
+            string str = haystack.substr(i, size);
+            if (str == needle)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 };
 
